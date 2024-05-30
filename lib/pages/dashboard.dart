@@ -17,14 +17,54 @@ class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _searchController = TextEditingController();
 
   List<Product> coffeeProducts = [
-    Product(name: 'Espresso', image: 'Espresso.png', price: 2.99, inStock: true, details: 'Strong and bold espresso shot.'),
-    Product(name: 'Cappuccino', image: 'Capuccino.png', price: 3.99, inStock: true, details: 'A perfect blend of espresso, steamed milk, and foam.'),
-    Product(name: 'Latte', image: 'latte.png', price: 4.49, inStock: false, details: 'Smooth and creamy latte.'),
-    Product(name: 'Americano', image: 'americano.png', price: 2.49, inStock: true, details: 'Espresso diluted with hot water.'),
-    Product(name: 'Pastries', image: 'pastries.png', price: 4.99, inStock: false, details: 'Freshly baked pastries.'),
-    Product(name: 'Smoothie', image: 'smoothie.png', price: 3.79, inStock: true, details: 'Healthy and refreshing fruit smoothie.'),
-    Product(name: 'Tea', image: 'tea.png', price: 3.29, inStock: true, details: 'A variety of teas to choose from.'),
-    Product(name: 'Hot Chocolate', image: 'hotchocolate.png', price: 5.99, inStock: false, details: 'Rich and creamy hot chocolate.'),
+    Product(
+        name: 'Espresso',
+        image: 'Espresso.png',
+        price: 2.99,
+        inStock: true,
+        details: 'Strong and bold espresso shot.'),
+    Product(
+        name: 'Cappuccino',
+        image: 'Capuccino.png',
+        price: 3.99,
+        inStock: true,
+        details: 'A perfect blend of espresso, steamed milk, and foam.'),
+    Product(
+        name: 'Latte',
+        image: 'latte.png',
+        price: 4.49,
+        inStock: false,
+        details: 'Smooth and creamy latte.'),
+    Product(
+        name: 'Americano',
+        image: 'americano.png',
+        price: 2.49,
+        inStock: true,
+        details: 'Espresso diluted with hot water.'),
+    Product(
+        name: 'Pastries',
+        image: 'pastries.png',
+        price: 4.99,
+        inStock: false,
+        details: 'Freshly baked pastries.'),
+    Product(
+        name: 'Smoothie',
+        image: 'smoothie.png',
+        price: 3.79,
+        inStock: true,
+        details: 'Healthy and refreshing fruit smoothie.'),
+    Product(
+        name: 'Tea',
+        image: 'tea.png',
+        price: 3.29,
+        inStock: true,
+        details: 'A variety of teas to choose from.'),
+    Product(
+        name: 'Hot Chocolate',
+        image: 'hotchocolate.png',
+        price: 5.99,
+        inStock: false,
+        details: 'Rich and creamy hot chocolate.'),
   ];
 
   List<Product> displayedProducts = [];
