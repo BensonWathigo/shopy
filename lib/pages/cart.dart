@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 
 class CartScreen extends StatelessWidget {
-  const CartScreen({Key? key}) : super(key: key);
+  const CartScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +29,10 @@ class CartScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8.0),
                           child: Image.asset('assets/images/${product.image}', fit: BoxFit.cover, width: 50),
                         ),
-                        title: Text(product.name, style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold)),
+                        title: Text(product.name, style: const TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold)),
                         subtitle: Text('\$${product.price.toStringAsFixed(2)}', style: TextStyle(color: Colors.grey[700])),
                         trailing: IconButton(
-                          icon: Icon(Icons.remove_circle_outline, color: Colors.red),
+                          icon: const Icon(Icons.remove_circle_outline, color: Colors.red),
                           onPressed: () {
                             cartProvider.removeFromCart(product);
                           },
@@ -53,8 +53,8 @@ class CartScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Total:', style: TextStyle(fontSize: 20.0)),
-                    Text('\$${cartProvider.totalPrice.toStringAsFixed(2)}', style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
+                    const Text('Total:', style: TextStyle(fontSize: 20.0)),
+                    Text('\$${cartProvider.totalPrice.toStringAsFixed(2)}', style: const TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold)),
                   ],
                 ),
               ),
@@ -66,10 +66,10 @@ class CartScreen extends StatelessWidget {
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue, // Use backgroundColor instead of primary
-                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-                    textStyle: TextStyle(fontSize: 18),
+                    padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                    textStyle: const TextStyle(fontSize: 18),
                   ),
-                  child: Text('Checkout'),
+                  child: const Text('Checkout'),
                 ),
               ),
             ],

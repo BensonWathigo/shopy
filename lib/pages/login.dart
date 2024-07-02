@@ -3,9 +3,8 @@ import 'package:ecommerce/components/myTextfield.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
 class LoginPage extends StatelessWidget {
-  LoginPage({Key? key});
+  LoginPage({super.key});
 
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -18,14 +17,14 @@ class LoginPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            Icon(
+            const Icon(
               Icons.lock,
               size: 100,
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Text(
               "Welcome, you've been missed.",
               style: TextStyle(
@@ -33,19 +32,19 @@ class LoginPage extends StatelessWidget {
                 fontSize: 16,
               ),
             ),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             MyTextField(
               controller: usernameController,
               hintText: 'username',
               obscureText: true,
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             MyTextField(
               controller: passwordController,
               hintText: 'password',
               obscureText: true,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Row(
@@ -57,7 +56,7 @@ class LoginPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             MyButton(
               onTap: () {
                 Get.offAllNamed("/homepage");
@@ -96,14 +95,14 @@ class LoginPage extends StatelessWidget {
                   'images/Google.jpg',
                   height: 42,
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Image.asset(
                   'images/Apple.jpg',
                   height: 42,
                 ),
               ],
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -111,7 +110,7 @@ class LoginPage extends StatelessWidget {
                   'Not a member?',
                   style: TextStyle(color: Colors.grey[700]),
                 ),
-                SizedBox(width: 4),
+                const SizedBox(width: 4),
                 Text(
                   'Register now!',
                   style: TextStyle(

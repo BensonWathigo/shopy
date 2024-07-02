@@ -1,7 +1,6 @@
 import 'package:ecommerce/models/products.dart';
 import 'package:flutter/material.dart';
 
-
 class ProductItem extends StatelessWidget {
   final Product product;
   final Function(Product) onAddToCart;
@@ -9,12 +8,12 @@ class ProductItem extends StatelessWidget {
   final Function(Product) onPreorder;
 
   const ProductItem({
-    Key? key,
+    super.key,
     required this.product,
     required this.onAddToCart,
     required this.onViewDetails,
     required this.onPreorder,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +25,7 @@ class ProductItem extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: ClipRRect(
@@ -71,7 +70,8 @@ class ProductItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ElevatedButton(
-                  onPressed: product.inStock ? () => onAddToCart(product) : null,
+                  onPressed:
+                      product.inStock ? () => onAddToCart(product) : null,
                   child: const Text('Add to Cart'),
                 ),
                 if (!product.inStock)

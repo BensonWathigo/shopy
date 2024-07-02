@@ -8,12 +8,14 @@ void main() {
   runApp(
     ChangeNotifierProvider(
       create: (context) => CartProvider(),
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
